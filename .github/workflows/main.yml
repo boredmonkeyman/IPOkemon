@@ -17,13 +17,13 @@ jobs:
     runs-on: windows-2022
 
     env:
-      SolutionPath: "./PokemonJPG.sln"
+      SolutionPath: "PokemonJPG.sln"
       Platform: x64
       Configuration: Debug
       BuildMode: SideLoadOnly
       AppxBundle: Never
       ProjectPath: "PokemonJGP/PokemonJGP.csproj"
-      ProjectDirectory: "./PokemonJGP/Xbox Pokemon"
+      ProjectDirectory: "PokemonJGP/Xbox Pokemon"
       PackageOutputRootDir: "D:\\a\\pac-man-emulator\\pac-man-emulator\\emulator.uwp\\AppPackages"
       PackageOutputDir: "D:\\a\\pac-man-emulator\\pac-man-emulator\\emulator.uwp\\Xbox Pacman"
 
@@ -93,3 +93,4 @@ jobs:
         with:
           name: Pacman_Archive
           path: D:\a\pac-man-emulator\pac-man-emulator\emulator.uwp\AppPackages\Pacman_Archive.zip
+          
