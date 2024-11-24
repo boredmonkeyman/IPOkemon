@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="PokemonJGP.infoPokemon"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PokemonJGP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/fondo pokemon.png" Opacity="0.7"/>
+        </Grid.Background>
+
+        <RichTextBlock Margin="10,10,17,16" Width="Auto">
+            <Paragraph>
+                <InlineUIContainer>
+                    <Grid Margin="0,62,-963,0" VerticalAlignment="Top" Height="148">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="12*"/>
+                            <!-- Columna izquierda -->
+                            <ColumnDefinition Width="19*"/>
+                            <!-- Columna derecha -->
+                        </Grid.ColumnDefinitions>
+                        <!-- Contenidos de la columna izquierda -->
+                        <StackPanel HorizontalAlignment="Left" Width="166" Margin="249,0,0,0" Grid.ColumnSpan="2">
+
+                            <TextBlock x:Name="myNombre" Text="Nombre" FontSize="28" FontWeight="Bold" Foreground="Black"/>
+                            <TextBlock x:Name="myCategoria" Text="Categoría" FontSize="28" FontWeight="Bold" Foreground="Black" Margin="0,10,0,0"/>
+                            <TextBlock x:Name="myTipo" Text="Tipo" FontSize="28" FontWeight="Bold" Foreground="Black" Margin="0,10,0,0"/>
+                        </StackPanel>
+                        <!-- Contenidos de la columna derecha -->
+                        <StackPanel Orientation="Vertical" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Height="134" Width="197">
+                            <TextBlock x:Name="myAltura" Text="Altura" FontSize="28" FontWeight="Bold" Foreground="Black" Margin="0,0,0,0" Width="178"/>
+                            <TextBlock x:Name="myPeso" Text="Peso" FontSize="28" FontWeight="Bold" Foreground="Black" Margin="0,10,0,0" Width="173"/>
+                            <TextBlock x:Name="myEvolucion" Text="Evolución" FontSize="28" FontWeight="Bold" Foreground="Black" Margin="0,10,0,0" Width="172"/>
+                        </StackPanel>
+                        <TextBlock HorizontalAlignment="Left" Margin="106,0,0,0" TextWrapping="Wrap" Text="Nombre:" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" Foreground="White" Height="37" Width="116"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="86,0,0,0" TextWrapping="Wrap" Text="Categoria:" VerticalAlignment="Center" FocusVisualPrimaryBrush="White" FontSize="28" FontWeight="Bold" Foreground="White" Height="37" Width="136"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="156,101,0,0" TextWrapping="Wrap" Text="Tipo:" VerticalAlignment="Top" FocusVisualPrimaryBrush="Black" FontSize="28" FontWeight="Bold" Foreground="White" Height="37" Width="73"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="105,0,0,0" TextWrapping="Wrap" Text="Altura:" VerticalAlignment="Top" FocusVisualPrimaryBrush="Black" FontSize="28" FontWeight="Bold" Foreground="White" Grid.Column="1" Height="37" Width="97"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="126,0,0,0" TextWrapping="Wrap" Text="Peso:" VerticalAlignment="Center" FocusVisualPrimaryBrush="Black" FontSize="28" FontWeight="Bold" Foreground="White" Grid.Column="1" Height="37" Width="75"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="59,98,0,0" TextWrapping="Wrap" Text="Evolucion:" VerticalAlignment="Top" FocusVisualPrimaryBrush="Black" FontSize="28" FontWeight="Bold" Foreground="White" Grid.Column="1" Height="37" Width="161"/>
+
+                    </Grid>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph FontSize="28" FontWeight="Bold" Foreground="Black" Margin="0,100,0,0">
+                <Run x:Name="myDescripcion" Text="Descripción" />
+            </Paragraph>
+        </RichTextBlock>
+
+    </Grid>
+</Page>

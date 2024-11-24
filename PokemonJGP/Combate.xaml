@@ -1,0 +1,121 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PokemonJGP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Custom="using:pokemonFinalDALF"
+    xmlns:Custom1="using:PokemonP4"
+    xmlns:Custom2="using:ControlUsuario_IPO2"
+    xmlns:Custom3="using:Sesion4"
+    xmlns:Custom4="using:pikachu_AP"
+    xmlns:Custom5="using:ButterFreeACC"
+    xmlns:Custom6="using:Pokemon_Antonio_Campallo_Gomez"
+    xmlns:Custom7="using:PokemonAron"
+    xmlns:Custom8="using:Pokemon1"
+    xmlns:Custom9="using:CharmanderBueno"
+    xmlns:Custom10="using:OrtizCañameroRoberto_Snorlax"
+    x:Class="PokemonJGP.Combate"
+    mc:Ignorable="d">
+    <Page.Background>
+        <ImageBrush ImageSource="/Assets/fondo pokemon.png"/>
+    </Page.Background>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="250*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="250*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="120*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/fonCom.jpg" Stretch="Fill"></ImageBrush>
+        </Grid.Background>
+        <TextBlock x:Uid="j2_combate" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Combate" VerticalAlignment="Center" FontSize="72" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3"/>
+        <TextBlock x:Uid="j2_j1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Jugador 1" VerticalAlignment="Center" FontSize="72" Grid.Column="1" Grid.Row="2"/>
+        <TextBlock x:Uid="j2_j2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Jugador 2" VerticalAlignment="Center" FontSize="72" Grid.Column="3" Grid.Row="2"/>
+        <FlipView x:Name="fv_jugador1" x:FieldModifier="private" Grid.Column="1" Grid.Row="3" Background="Transparent">
+            <local:GrookeyJGPMP/>
+            <Custom:MyUserControl1/>
+            <Custom1:cyndaFinal/>
+            <Custom2:DragoniteCSD/>
+            <Custom3:GengarJCC/>
+            <Custom4:pikachu_AP/>
+            <Custom5:ButterFreeACC/>
+            <Custom6:ArticunoACG/>
+            <Custom7:AronMCC/>
+            <Custom8:AzumarillACR/>
+            <Custom9:CharmanderFJDR/>
+            <Custom10:SnorlaxROC/>
+        </FlipView>
+
+        <FlipView x:Name="fv_jugador2" x:FieldModifier="private" Grid.Column="3" Grid.Row="3" Background="Transparent">
+            <local:GrookeyJGPMP/>
+            <Custom:MyUserControl1/>
+            <Custom1:cyndaFinal/>
+            <Custom2:DragoniteCSD/>
+            <Custom3:GengarJCC/>
+            <Custom4:pikachu_AP/>
+            <Custom5:ButterFreeACC/>
+            <Custom6:ArticunoACG/>
+            <Custom7:AronMCC/>
+            <Custom8:AzumarillACR/>
+            <Custom9:CharmanderFJDR/>
+            <Custom10:SnorlaxROC/>
+        </FlipView>
+        <Button x:Uid="j2_aceptarj1" x:Name="btn_jug1" Grid.Column="1" Content="Elegir Pokemon" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_jug1_Click"/>
+        <TextBlock x:Name="jug1_espera" Grid.Column="1" Text="Turno del jugador 2, espera tu turno." Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Collapsed" FontWeight="Bold" FontSize="24" TextWrapping="Wrap"/>
+        <Button x:Uid="j2_aceptarj2" x:Name="btn_jug2" Grid.Column="3" Content="Elegir Pokemon" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btn_jug2_Click"/>
+        <TextBlock x:Name="jug2_espera" Grid.Column="3" Text="Turno del jugador 1, espera tu turno." Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Collapsed" FontWeight="Bold" FontSize="24" TextWrapping="Wrap"/>
+        <Grid x:Name="controles_jug1" Grid.Column="1" Grid.Row="4" Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition Width="15*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15*"/>
+                <RowDefinition Height="15*"/>
+            </Grid.RowDefinitions>
+            <Button x:Uid="j2_j1_atacar" x:Name="btn_ataque_jug1" Content="Atacar" Margin="0,0,0,0" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btn_atacar1_Click" Visibility="Visible"/>
+            <Button x:Uid="j2_j1_atacar_fuerte" x:Name="btn_atacar_fuerte_jug1" Content="Ataque Fuerte" Margin="-1,56,1,-45"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btn_atacar_fuerte_Click" Grid.Row="1"/>
+            <Button x:Uid="j2_j1_curar" x:Name="btn_curar_jug1" Content="Curarse" Margin="0,0,0,0" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btn_curar1_Click"/>
+            <Button x:Uid="j2_j1_energia" x:Name="btn_energia_jug1" Content="Subir Energía" Margin="0,0,0,0" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btn_subirEnergia1_Click"/>
+            <Button x:Uid="j2_j1_rendirse" x:Name="btn_rendirse_jug1" Content="Rendirse" Margin="0,0,0,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btn_rendirse1_Click"/>
+            <Button x:Uid="j2_j1_atacar_fuerte" x:Name="btn_defensa_jug1" Content="Defensa" Margin="317,56,-2,-45"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btn_defensa1_Click" Grid.Row="1" Grid.ColumnSpan="2"/>
+            <Button x:Uid="j2_j1_descansar" x:Name="btn_descanso1" Content="Descansar" Margin="-2,101,1,-90"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btn_descanso_Click" Grid.Row="1"/>
+        </Grid>
+
+        <Grid x:Name="controles_jug2" Grid.Column="3" Grid.Row="4" Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition Width="15*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15*"/>
+                <RowDefinition Height="15*"/>
+            </Grid.RowDefinitions>
+            <Button x:Uid="j2_j2_atacar" x:Name="btn_ataque_jug2" Content="Atacar" Margin="0,0,0,0" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btn_atacar2_Click"/>
+            <Button x:Uid="j2_j2_curar" x:Name="btn_curar_jug2" Content="Curarse" Margin="0,0,0,0" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btn_curar2_Click"/>
+            <Button x:Uid="j2_j2_energia" x:Name="btn_energia_jug2" Content="Subir Energía" Margin="0,0,0,0" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btn_subirEnergia2_Click"/>
+            <Button x:Uid="j2_j2_rendirse" x:Name="btn_rendirse_jug2" Content="Rendirse" Margin="0,0,0,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btn_rendirse2_Click"/>
+            <Button x:Uid="j2_j1_atacar_fuerte" x:Name="btn_atacar_fuerte_jug2" Content="Ataque Fuerte" Margin="0,61,0,-69"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btn_atacar_fuerte2_Click" Grid.Row="1"/>
+            <Button x:Uid="j2_j1_atacar_fuerte" x:Name="btn_defensa_jug2" Content="Defensa" Margin="1,61,-1,-69"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btn_defensa2_Click" Grid.Row="1" Grid.Column="1"/>
+            <Button x:Uid="j2_j1_atacar_fuerte" x:Name="btn_descanso2" Content="Descansar" Margin="-1,125,0,-114"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btn_descanso1_Click" Grid.Row="1"/>
+        </Grid>
+        <Image x:Name="fondo_combate" Source="/Assets/victoria.jpg" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5"
+               Grid.RowSpan="7" Stretch="UniformToFill" Visibility="Collapsed"/>
+        <TextBlock x:Name="mensaje_victoria" Text="El jugador 1 ha ganado el combate." Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3"
+               Grid.RowSpan="7" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="72" FontWeight="Bold" FocusVisualPrimaryBrush="White" FocusVisualSecondaryBrush="#99FFFFFF" Visibility="Collapsed" TextWrapping="Wrap"/>
+
+    </Grid>
+</Page>

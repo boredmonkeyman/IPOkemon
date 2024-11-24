@@ -1,0 +1,93 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PokemonJGP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Custom="using:PokemonP4"
+    xmlns:Custom1="using:pokemonFinalDALF"
+    xmlns:Custom2="using:ControlUsuario_IPO2"
+    xmlns:Custom3="using:Sesion4"
+    xmlns:Custom4="using:pikachu_AP"
+    xmlns:Custom5="using:ButterFreeACC"
+    xmlns:Custom6="using:Pokemon_Antonio_Campallo_Gomez"
+    xmlns:Custom7="using:PokemonAron"
+    xmlns:Custom8="using:Pokemon1"
+    xmlns:Custom9="using:CharmanderBueno"
+    xmlns:Custom10="using:OrtizCañameroRoberto_Snorlax"
+    
+
+    x:Class="PokemonJGP.Pokedex"
+    mc:Ignorable="d">
+
+    <!-- Agregando ScrollViewer para permitir desplazamiento vertical -->
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/Assets/fondo pokemon.png" />
+            </Grid.Background>
+
+            <!-- Definición de la cuadrícula en cuatro filas y tres columnas iguales -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="157*"/>
+                <RowDefinition Height="200*"/>
+                <RowDefinition Height="188*"/>
+                <RowDefinition Height="200*"/>
+                <!-- Fila adicional agregada -->
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Elementos existentes -->
+            <Border x:Name="Grookey" Tapped="GrookeyJGPMP" BorderThickness="0" HorizontalAlignment="Center" Height="314" VerticalAlignment="Center" Width="480">
+                <local:GrookeyJGPMP />
+            </Border>
+            <Border x:Name="Cyndaquil" BorderThickness="0" Grid.Column="1" HorizontalAlignment="Center" Height="314" VerticalAlignment="Center" Width="480" Tapped="CyndaquilTapped">
+                <Custom:cyndaFinal/>
+            </Border>
+            <Border x:Name="AnotherPokemon" BorderThickness="0" Grid.Column="2" HorizontalAlignment="Center" Height="314" VerticalAlignment="Center" Width="480" Tapped="AnotherPokemonTapped">
+                <Custom1:MyUserControl1/>
+            </Border>
+
+            <Border x:Name="ButterFreeACC" BorderThickness="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="480"  Height="584" Tapped="ButterFreeTapped">
+                <Custom5:ButterFreeACC/>
+            </Border>
+
+            <Border x:Name="GengarJCC" BorderThickness="0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="480"  Height="314" Tapped="GengarTapped">
+                <Custom3:GengarJCC/>
+            </Border>
+
+            <Border x:Name="PikachuAP" BorderThickness="0" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="480"  Height="314" Tapped="PikachuTapped">
+                <Custom4:pikachu_AP/>
+            </Border>
+
+            <Border x:Name="ArticunoACG" BorderThickness="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="480"  Height="314" Tapped="ArticunoTapped">
+                <Custom6:ArticunoACG/>
+            </Border>
+
+            <Border x:Name="AronMCC" BorderThickness="10" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="480"  Height="312" Tapped="AronTapped">
+                <Custom7:AronMCC/>
+            </Border>
+
+            <Border x:Name="AzumarillACR" BorderThickness="0" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="480"  Height="314" Tapped="AzumarillTapped">
+                <Custom8:AzumarillACR/>
+            </Border>
+
+            <Border x:Name="CharmanderFJDR" BorderThickness="10" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="480"  Height="314" Tapped="CharmanderTapped">
+                <Custom9:CharmanderFJDR/>
+            </Border>
+
+            <Border x:Name="DragoniteCSD" BorderThickness="10" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="480"  Height="314" Tapped="DragoniteTapped">
+                <Custom2:DragoniteCSD/>
+            </Border>
+
+            <Border x:Name="SnorlaxROC" BorderThickness="0" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="480"  Height="314" Tapped="SnorlaxTapped">
+                <Custom10:SnorlaxROC/>
+            </Border>
+
+        </Grid>
+    </ScrollViewer>
+</Page>

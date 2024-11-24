@@ -1,0 +1,390 @@
+﻿<UserControl
+    x:Class="pikachu_AP.pikachu_AP"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:pikachu_AP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    KeyDown="Window_KeyDown"
+    
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <UserControl.Resources>
+
+
+        <Storyboard x:Name="StoryboardManoDcha" x:Key="StoryBoardManoDcha" SpeedRatio="2">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-120.405"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-79.003"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardManoIzq" SpeedRatio="2">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ellipse1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-57.988"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-108.71"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardOrejaIzq" SpeedRatio="2">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ellipse2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="55.923"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="0.769"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardOrejaDcha" SpeedRatio="2" >
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ellipse3" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-50.604"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-14.75"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardDespHoriz">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="canvas" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-133.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="91.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="canvas" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-4.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-7.5"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardCola">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ptCola" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="29.047"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-27.683"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardHuida" >
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="canvas" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-234"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-404"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-446"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-288"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.5000000" Value="-174"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="10"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.5000000" Value="194"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:04" Value="322"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:04.5000000" Value="12"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="canvas" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-102"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-162"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-264"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-266"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.5000000" Value="-168"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-108"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.5000000" Value="-222"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:04" Value="-270"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:04.5000000" Value="-66"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardMovDef" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="canvas" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="2"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.7000000" Value="-4"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="canvas" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-52"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.7000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardMovDefault" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="canvas" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-25"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-30"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-25"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+
+        <Storyboard x:Name="StoryboardMuerte">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="canvas" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-12"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.7000000" Value="-25"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-42"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.3000000" Value="-50"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardRevivir">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="canvas" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-50"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-38"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-27"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-18"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.3000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+
+
+        <Storyboard x:Name="StoryboardRetirada">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="canvas" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="200"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="100"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="50"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardAtaqueFuerte" SpeedRatio="5">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="cvRayo" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="20"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="30"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="40"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="50"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.5000000" Value="60"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="70"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.5000000" Value="80"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:04" Value="90"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:04.5000000" Value="100"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:05" Value="110"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:05.6000000" Value="120"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:06" Value="130"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:06.5000000" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:07" Value="170"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:07.5000000" Value="190"/>
+
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Name="StoryboardAtaqueFuerteInicio" SpeedRatio="5">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="cvRayo" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:08" Value="20"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardAtaque" SpeedRatio="3">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-3.557"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="43.361"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:04" Value="-75.952"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="canvas" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="60"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="100"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="200"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.5000000" Value="300"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="400"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.5000000" Value="100"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:04" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardDesaparecer" SpeedRatio="2">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="canvas" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-18.062"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-34.262"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.6000000" Value="-34.262"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-0.113"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="canvas" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="100"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="200"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.6000000" Value="800"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="500"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="400"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:04" Value="200"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:04.5000000" Value="7"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+
+
+
+
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="81*"></RowDefinition>
+            <RowDefinition Height="71*"></RowDefinition>
+            <RowDefinition Height="382*"></RowDefinition>
+            <RowDefinition Height="466*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="103*"></ColumnDefinition>
+            <ColumnDefinition Width="1311*"></ColumnDefinition>
+            <ColumnDefinition Width="86*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+
+        <Button Content="Button" Margin="88,151,0,0" VerticalAlignment="Top" Click="Button_Click" Grid.Column="1" Height="0" Grid.Row="2" Width="0"/>
+        <TextBlock x:Name="tbSaludo" HorizontalAlignment="Left" Margin="93,357,0,0" Visibility="Collapsed"  TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Height="0" Grid.Row="2" Width="0"/>
+        <ProgressBar x:Name="pbVida" Visibility="Visible" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="50" Value="70" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" />
+        <ProgressBar x:Name="pbSegundaVida" Visibility="Visible" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Value="50" Height="50" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Foreground="#FFD2D400"  />
+
+        <Image x:Name="landscape" Grid.Row="2" Grid.RowSpan="4" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="/Assets/AssetsPikachuAP/wp10311649.png" Visibility="Visible" Stretch="Fill"></Image>
+        <Image x:Name="imgVida" Grid.Row="0" Grid.Column="0" Source="/Assets/AssetsPikachuAP/vida.jpg" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Image x:Name="imgRayo" Grid.Column="0"  Visibility="Visible" Source="/Assets/AssetsPikachuAP/rayo.jpg" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill"  Grid.Row="1"/>
+        <!--<Image HorizontalAlignment="Left" Height="47" Margin="8,0,0,0" VerticalAlignment="Center" Width="85" Source="/AssetsPikachuAP/vida.jpg"/>-->
+        <Image x:Name="imgPocima" Grid.Column="2" Margin="5,5,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Source="/Assets/AssetsPikachuAP/pocima.jpeg" Stretch="Fill"  PointerReleased="imgPocima_PointerReleased" />
+
+        <Image x:Name="imgPocima2" Grid.Column="2"  Grid.Row="1"  Margin="5,5,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Source="/Assets/AssetsPikachuAP/pocima_azul.jpg" Stretch="Fill" />
+        <Viewbox x:Name="vbCanvas" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2"  Width="auto" Height="auto" Margin="26,10,25,41">
+
+
+            <Canvas x:Name="canvas"  HorizontalAlignment="Center" Height="344.043" Grid.RowSpan="2" VerticalAlignment="Top" Width="783.333" Margin="0,305,0,0" Grid.Column="1" Grid.Row="2" RenderTransformOrigin="0.5,0.5">
+                <Canvas.Projection>
+                    <PlaneProjection/>
+                </Canvas.Projection>
+                <Canvas.RenderTransform>
+                    <CompositeTransform Rotation="0"/>
+                </Canvas.RenderTransform>
+
+
+                <Canvas Name="cvRayo" Height="120" Canvas.Left="616" Canvas.Top="83" Width="35" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+                    <Canvas.RenderTransform>
+                        <CompositeTransform TranslateX="10"/>
+                    </Canvas.RenderTransform>
+                    <Rectangle x:Name="rayo" Height="40" Width="10" FocusVisualPrimaryBrush="#FFFFF800" Fill="#FFFFF800" RenderTransformOrigin="0.5,0.5"  UseLayoutRounding="False" d:LayoutRounding="Auto"  >
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform Rotation="36.062"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Rectangle Height="40" Width="10" Fill="#FFFFF800" Canvas.Left="7.265" Canvas.Top="26.686" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform Rotation="-49.234"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Rectangle Height="40" Width="10" Fill="#FFFFF800" Canvas.Left="7.323" Canvas.Top="49.246" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform Rotation="40.315"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+
+                    <Rectangle Height="40" Width="10" Fill="#FFFFF800" Canvas.Left="10.852" Canvas.Top="71.806" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform Rotation="130.766"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+
+                    <Rectangle Height="26" Width="10" Fill="#FFFFF800" Canvas.Left="25.256" Canvas.Top="81.568" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform Rotation="175.275"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+
+                    <Rectangle Height="26" Width="10" Fill="#FFFFF800" Canvas.Left="17.481" Canvas.Top="94.293" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <Rectangle.RenderTransform>
+                            <CompositeTransform Rotation="242.837"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+
+                </Canvas>
+
+                <Ellipse x:Name="elBarriga" Fill="#FFEBDB1D" HorizontalAlignment="Left" Height="152.667" Margin="361.334,136.001,0,0" Stroke="Black" VerticalAlignment="Top" Width="127.5"/>
+
+                <Ellipse Fill="#FFEBD800" HorizontalAlignment="Left" Height="104.889" Margin="382.836,78.447,0,0" Stroke="Black" VerticalAlignment="Top" Width="83.333"/>
+                <Ellipse Fill="#FF1C1C1F" HorizontalAlignment="Left" Height="9" Margin="421,136.001,0,0" Stroke="Black" VerticalAlignment="Top" Width="9"/>
+                <Ellipse Fill="#FFEB2B00" HorizontalAlignment="Left" Height="26.354" Margin="384.799,142.047,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.513" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-30.583"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse Fill="#FFEB2B00" HorizontalAlignment="Left" Height="27.471" Margin="448.676,139.148,0,0" Stroke="Black" VerticalAlignment="Top" Width="16" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="28.767"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Path Data="M0.7355212,0.5 L0.7426697,0.58173561 C1.8564498,11.695391 6.6723303,20.0555 12.4445,20.0555 18.216669,20.0555 23.032551,11.695391 24.14633,0.58173561 L24.153479,0.5 24.251373,1.6192951 C24.341999,2.8303509 24.389,4.0707188 24.389,5.3334999 24.389,18.803173 19.041265,29.7225 12.4445,29.7225 5.8477349,29.7225 0.49999994,18.803173 0.5,5.3334999 0.49999994,4.0707188 0.54700154,2.8303509 0.63762718,1.6192951 z" Fill="Black" HorizontalAlignment="Left" Height="15.889" Margin="407.555,145.043,0,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="34.222"/>
+                <Ellipse Fill="Black" HorizontalAlignment="Left" Height="16" Margin="394.166,117.709,0,0" Stroke="Black" VerticalAlignment="Top" Width="16"/>
+                <Ellipse x:Name="elipsePupilaIzq" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="7" Margin="399.967,126.001,0,0" Stroke="White" VerticalAlignment="Top" Width="7">
+                    <Ellipse.Resources>
+                        <Storyboard x:Name="moverPupilaIzq" x:Key="moverPupilaIzqKey">
+                            <ColorAnimation BeginTime="00:00:00" Storyboard.TargetName="elipsePupilaIzq" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" From="White" To="Red" Duration="0:0:59" AutoReverse="True" />
+                        </Storyboard>
+                    </Ellipse.Resources>
+                </Ellipse>
+                <Ellipse Fill="Black" HorizontalAlignment="Left" Height="16" Margin="437.166,117.709,0,0" Stroke="Black" VerticalAlignment="Top" Width="16"/>
+
+                <Ellipse x:Name="elipsePupilaDcha" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="7" Margin="442.834,126.001,0,0" Stroke="White" VerticalAlignment="Top" Width="7"/>
+                <Canvas x:Name="cvPataDcha">
+                    <Ellipse Fill="#FFEBD800" HorizontalAlignment="Left" Height="32.834" Margin="453.169,268.376,0,0" Stroke="Black" VerticalAlignment="Top" Width="13" RenderTransformOrigin="0.427,0.111"/>
+                </Canvas>
+
+                <Canvas x:Name="cvPataIzq">
+                    <Ellipse Fill="#FFEBD800" HorizontalAlignment="Left" Height="32.834" Margin="382.836,268.376,0,0" Stroke="Black" VerticalAlignment="Top" Width="13" RenderTransformOrigin="0.453,0.146"/>
+                </Canvas>
+
+                <Canvas x:Name="cvOrejaIzq">
+                    <Ellipse x:Name="ellipse2" Fill="#FFEBD800" HorizontalAlignment="Left" Height="67" Margin="448.334,35.335,0,0" Stroke="#FFEBD800" VerticalAlignment="Top" Width="21" RenderTransformOrigin="0.468,0.935">
+                        <Ellipse.RenderTransform>
+                            <CompositeTransform Rotation="21.481" TranslateX="-10.627" TranslateY="-2.269"/>
+                        </Ellipse.RenderTransform>
+                    </Ellipse>
+                </Canvas>
+
+                <Canvas x:Name="cvOrejaDcha">
+                    <Ellipse x:Name="ellipse3" Fill="#FFEBD800" HorizontalAlignment="Left" Height="67" Margin="379.584,35.246,0,0" Stroke="#FFEBD800" VerticalAlignment="Top" Width="21" RenderTransformOrigin="0.542,0.938">
+                        <Ellipse.RenderTransform>
+                            <CompositeTransform Rotation="-21.481" TranslateX="10.685" TranslateY="-2.361"/>
+                        </Ellipse.RenderTransform>
+                    </Ellipse>
+                </Canvas>
+
+                <Ellipse Fill="#FFEBDB1D" HorizontalAlignment="Left" Height="57" Margin="359.836,152.254,0,0" Stroke="Black" VerticalAlignment="Top" Width="25.333" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="21.437"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Canvas x:Name="cvManoIzq">
+                    <Ellipse x:Name="ellipse1" Fill="#FFEBDB1D" HorizontalAlignment="Left" Height="57" Margin="371.836,162.921,0,0" Stroke="Black" VerticalAlignment="Top" Width="25.333" RenderTransformOrigin="0.544,0.104">
+                        <Ellipse.RenderTransform>
+                            <CompositeTransform Rotation="-112.287" TranslateX="-22.401" TranslateY="30.115"/>
+                        </Ellipse.RenderTransform>
+                    </Ellipse>
+                </Canvas>
+
+                <Ellipse Fill="#FFEBDB1D" HorizontalAlignment="Left" Height="57" Margin="466.503,150.255,0,0" Stroke="Black" VerticalAlignment="Top" Width="25.333" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-207.013"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Canvas x:Name="cvManoDcha">
+                    <Ellipse x:Name="ellipse" Fill="#FFEBDB1D" HorizontalAlignment="Left" Height="57" Margin="454.503,163.587,0,0" Stroke="Black" VerticalAlignment="Top" Width="25.333" RenderTransformOrigin="0.521,0.868">
+                        <Ellipse.RenderTransform>
+                            <CompositeTransform Rotation="-75.952" TranslateX="19.949" TranslateY="-16.395"/>
+                        </Ellipse.RenderTransform>
+                    </Ellipse>
+                </Canvas>
+
+                <Canvas x:Name="cvCola">
+                    <Path x:Name="ptCola" Data="M97.90023,0.5 L114.21177,35.712589 114.3735,35.638397 120.236,48.417768 86.356865,63.959503 84.19445,70.471302 45.499889,57.621891 45.499889,78.556484 45.499889,85.470436 45.499889,90.847397 0.5,90.847397 0.5,78.556484 32.49992,78.556484 32.49992,44.512733 45.499889,44.512733 45.499889,44.671023 74.030647,54.145304 88.560829,47.479717 72.293221,12.361944 z" Fill="#FFEBDB1D" HorizontalAlignment="Left" Height="91.347" Margin="461.169,125.266,0,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="120.736" RenderTransformOrigin="0.059,0.935">
+                        <Path.RenderTransform>
+                            <CompositeTransform Rotation="-20.942" TranslateX="17.72" TranslateY="16.406"/>
+                        </Path.RenderTransform>
+                    </Path>
+                </Canvas>
+
+
+
+            </Canvas>
+        </Viewbox>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="116,94,0,0" Grid.Row="3" TextWrapping="Wrap" Text="PIKACHU
+                 " VerticalAlignment="Top" Width="139" Foreground="Black" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="24" FontWeight="Bold"/>
+
+
+    </Grid>
+</UserControl>
